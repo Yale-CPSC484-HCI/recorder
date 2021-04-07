@@ -23,3 +23,13 @@ Playback the data in `data/sample1`
 ```
 pipenv run python src/main.py --data-path data/sample1 --mode playback
 ```
+
+## Data Preview
+
+You can preview the data during recording or playback by opening your local browser to [http://127.0.0.1:4444](http://127.0.0.1:4444).
+
+## Consuming Locally Recorded Data
+
+Start this project in playback mode.
+
+In your app, connect to `ws://127.0.0.1:4444/twod` or `http://127.0.0.1:4444/frames` for the depth image with pose information or the spatial data frames, respectively.
