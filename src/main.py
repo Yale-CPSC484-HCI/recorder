@@ -164,11 +164,11 @@ def main():
         tornado.ioloop.IOLoop.current().spawn_callback(app.subscribe_frames)
         tornado.ioloop.IOLoop.current().spawn_callback(app.subscribe_twod)
     else:
+        if args.websocket_server:
+            raise RuntimeError("Please remove the --websocker-server flag when playing back locally recorded data")
         tornado.ioloop.PeriodicCallback(app.playback, (1/args.fps) * 1000).start()
 
     try:
-        if args.websocket_server:
-            raise RuntimeError("Please remove the --websocker-server flag when playing back locally recorded data")
         tornado.ioloop.IOLoop.current().start()
     except KeyboardInterrupt:
         if args.mode == 'record':
