@@ -172,7 +172,7 @@ def main():
         tornado.ioloop.IOLoop.current().start()
     except KeyboardInterrupt:
         if args.mode == 'record':
-            print(f"recording is in {args.data_path}, switch to --mode playback to play the recording")
+            print(f"recording is in {args.data_path}, switch to '--mode play' to play the recording")
         tornado.ioloop.IOLoop.instance().stop()
 
 
