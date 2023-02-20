@@ -50,6 +50,8 @@ class Application(tornado.web.Application):
             self.pkls = []
             for pkl in sorted(list(glob.iglob(os.path.join(self.args.data_path, f"*.pkl")))):
                 self.pkls.append(pkl)
+            if not self.pkls:
+                raise RuntimeError(f"No pkl files found in {self.args.data_path}")
 
         super().__init__(handlers, **settings)
 
