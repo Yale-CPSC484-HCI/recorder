@@ -1,4 +1,15 @@
- 1. login to the Zoo (either in person or over SSH)
+# Setting up the recorder on the Zoo
+
+The following steps describe how to setup the recorder utility under your account on the [Zoo](https://zoo.cs.yale.edu/newzoo/).
+For more information about the usage of the recorder, refer to the [main readme](../README.md).
+
+ 1. Login to the Zoo (either in person or over SSH).
+
+   ```
+   $ ssh <netid>@node.zoo.cs.yale.edu
+   ```
+
+   > Note that you can setup the project on any node of the Zoo, and it will be available on any Zoo machine.
 
  2. Checkout pyenv to a local directory: [https://github.com/pyenv/pyenv#basic-github-checkout](https://github.com/pyenv/pyenv#basic-github-checkout)
 
@@ -76,11 +87,11 @@
     $ pipenv run python src/main.py --data-path data/sample --mode play
     ```
 
-    > Note that if you are connecting to the Zoo via SSH, you should follow the steps below.
+    > Note that if you are connecting to the Zoo via SSH, you should follow Step 9 below. Otherwise, move to Step 10.
 
  9. **Port forwarding (if you are connecting via SSH).**
     If you are connecting to the Zoo via SSH, you will need to enable [port forwarding](https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding) in order to access the WebSocket that exposes Kinect body tracking data.
-    
+
     To invoke port forwarding, start a new SSH session based on the following form:
 
     ```
@@ -95,7 +106,7 @@
     // on your local machine
     $ ssh -L 4040:localhost:1414 netid@node.zoo.cs.yale.edu
 
-    // on the zoo machine
+    // on the Zoo
     $ cd recorder
     $ pipenv run python src/main.py --data-path data/sample --mode play --local-port 1414
     ```

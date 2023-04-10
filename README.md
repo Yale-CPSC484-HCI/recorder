@@ -48,3 +48,7 @@ You can preview the data during recording or playback by opening your local brow
 Start this project in playback mode.
 
 In your app, connect to `ws://127.0.0.1:4444/twod` or `http://127.0.0.1:4444/frames` for the depth image with pose information or the spatial data frames, respectively.
+
+## Setup on the Zoo
+
+To setup this project on the Zoo, please refer to the [Zoo setup readme](./docs/zoo_setup.md).
