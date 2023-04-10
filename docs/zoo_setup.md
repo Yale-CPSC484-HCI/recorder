@@ -5,11 +5,11 @@ For more information about the usage of the recorder, refer to the [main readme]
 
  1. Login to the Zoo (either in person or over SSH).
 
-   ```
-   $ ssh <netid>@node.zoo.cs.yale.edu
-   ```
+    ```
+    $ ssh <netid>@node.zoo.cs.yale.edu
+    ```
 
-   > Note that you can setup the project on any node of the Zoo, and it will be available on any Zoo machine.
+    > Note that you can setup the project on any node of the Zoo, and it will be available on any Zoo machine.
 
  2. Checkout pyenv to a local directory: [https://github.com/pyenv/pyenv#basic-github-checkout](https://github.com/pyenv/pyenv#basic-github-checkout)
 
