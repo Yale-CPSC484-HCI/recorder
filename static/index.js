@@ -45,8 +45,6 @@ var sp2tx = {
   },
 
   process: function(data) {
-    if (data !== "") {
-      console.log("/sp2tx received: " + data);
-    }
+    console.log("/sp2tx received: " + data);
   }
 };

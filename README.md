@@ -18,7 +18,7 @@ pipenv run python src/main.py --data-path data/sample --mode play
 
 ## Record Your Own Data
 
-Record to `data/sample1`, replacing `[Server_Name]` with the name of the HCI Display server found in this list: [https://cpsc484-584-hci.gitlab.io/s23/display_tutorial/#server-names](https://cpsc484-584-hci.gitlab.io/s23/display_tutorial/)
+Record to `data/sample1`, replacing `[Server_Name]` with the name of the HCI Display server found in this list: [https://cpsc484-584-hci.gitlab.io/s24/display_tutorial/#server-names](https://cpsc484-584-hci.gitlab.io/s24/display_tutorial/)
 
 ```
 pipenv run python src/main.py --websocket-server [Server_Name]:8888 --data-path data/sample1 --mode record
@@ -26,7 +26,7 @@ pipenv run python src/main.py --websocket-server [Server_Name]:8888 --data-path 
 
 For example, to record data from Display 1, in AKW: 
 ```
-pipenv run python src/main.py --websocket-server cpsc484-01.yale.internal:8888 --data-path data/sample1 --mode record
+pipenv run python src/main.py --websocket-server cpsc484-01.stdusr.yale.internal:8888 --data-path data/sample1 --mode record
 ```
 
 ## Playback Your Data
@@ -47,7 +47,7 @@ You can preview the data during recording or playback by opening your local brow
 
 Start this project in playback mode.
 
-In your app, connect to (1) `ws://127.0.0.1:4444/twod` for the depth image with pose information; (2) `ws://127.0.0.1:4444/depth` for the depth image only; (3) `ws://127.0.0.1:4444/frames` for the spatial data frames; and (4) `ws://127.0.0.1:4444/sp2tx` for the speech to text data.
+In your app, connect to (1) `ws://127.0.0.1:4444/twod` for the depth image with pose information; (2) `ws://127.0.0.1:4444/frames` for the spatial data frames; and (3) `ws://127.0.0.1:4444/sp2tx` for the speech to text data.
 
 ## Setup on the Zoo
 
