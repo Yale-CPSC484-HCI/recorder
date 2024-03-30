@@ -47,7 +47,7 @@ You can preview the data during recording or playback by opening your local brow
 
 Start this project in playback mode.
 
-In your app, connect to `ws://127.0.0.1:4444/twod` or `http://127.0.0.1:4444/frames` for the depth image with pose information or the spatial data frames, respectively.
+In your app, connect to (1) `ws://127.0.0.1:4444/twod` for the depth image with pose information; (2) `ws://127.0.0.1:4444/depth` for the depth image only; (3) `ws://127.0.0.1:4444/frames` for the spatial data frames; and (4) `ws://127.0.0.1:4444/sp2tx` for the speech to text data.
 
 ## Setup on the Zoo
 

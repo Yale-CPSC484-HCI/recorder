@@ -1,6 +1,7 @@
 $(document).ready(function() {
     twod.start();
     frames.start();
+    sp2tx.start();
 });
 
 var twod = {
@@ -30,5 +31,22 @@ var frames = {
 
   process: function(data) {
     console.log(data)
+  }
+};
+
+var sp2tx = {
+  socket: null,
+  start: function() {
+    var url = "ws://" + location.host + "/sp2tx";
+    sp2tx.socket = new WebSocket(url);
+    sp2tx.socket.onmessage = function (event) {
+      sp2tx.process(event.data);
+    }
+  },
+
+  process: function(data) {
+    if (data !== "") {
+      console.log("/sp2tx received: " + data);
+    }
   }
 };
