@@ -102,7 +102,8 @@ class Application(tornado.web.Application):
             res = pickle.load(f)
             TwoDHandler.send_2d(res['twod'])
             FrameHandler.send_updates(res['frame'])
-            Sp2txHandler.send_sp2tx(res['sp2tx'])
+            if 'sp2tx' in res.keys():
+                Sp2txHandler.send_sp2tx(res['sp2tx'])
         self.i += 1
         if self.i >= len(self.pkls):
             self.i = 0
